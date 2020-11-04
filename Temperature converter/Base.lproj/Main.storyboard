@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Temperature_converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converted Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjf-0t-5Oo">
+                                <rect key="frame" x="144" y="267" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the value here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pLu-dn-vLz">
+                                <rect key="frame" x="120" y="184" width="174" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="getFah:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Wau-RX-k8V"/>
+                                    <action selector="getFah:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="aWC-5D-wfY"/>
+                                    <action selector="getNewFah:" destination="BYZ-38-t0r" eventType="editingChanged" id="449-YZ-E2j"/>
+                                    <action selector="getNewFah:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="R4C-Yz-BXc"/>
+                                    <action selector="getNewFah:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="fIc-mJ-ar0"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3A-w9-XcH">
+                                <rect key="frame" x="43" y="55" width="328" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the value here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ofp-1Y-vWZ">
+                                <rect key="frame" x="120" y="135" width="174" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="getCel:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="U8c-HS-UOr"/>
+                                    <action selector="getNewCel:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="cnH-rL-HdT"/>
+                                    <action selector="getNewCel:" destination="BYZ-38-t0r" eventType="editingChanged" id="cy4-BV-zKP"/>
+                                    <action selector="getNewCel:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="kKM-IE-zb6"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9z-G6-HEi">
+                                <rect key="frame" x="325" y="134" width="69" height="30"/>
+                                <state key="normal" title="Cel to Fah"/>
+                                <connections>
+                                    <action selector="celToFah:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AQB-re-9Ny"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celsius:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptG-to-tBV">
+                                <rect key="frame" x="20" y="138" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fahrenheit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzt-cB-Dzt">
+                                <rect key="frame" x="20" y="188" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJl-bb-Lhw">
+                                <rect key="frame" x="325" y="183" width="73" height="30"/>
+                                <state key="normal" title="Fah to Cel "/>
+                                <connections>
+                                    <action selector="fahToCel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tyS-X6-kdn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U3A-w9-XcH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="0Am-oX-bV1"/>
+                            <constraint firstItem="pLu-dn-vLz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="563-th-LbF"/>
+                            <constraint firstItem="pLu-dn-vLz" firstAttribute="top" secondItem="ofp-1Y-vWZ" secondAttribute="bottom" constant="15" id="7fA-BX-TaJ"/>
+                            <constraint firstItem="ofp-1Y-vWZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BrB-Dm-olW"/>
+                            <constraint firstItem="ptG-to-tBV" firstAttribute="top" secondItem="U3A-w9-XcH" secondAttribute="bottom" constant="42" id="Ioh-wi-uEd"/>
+                            <constraint firstItem="nzt-cB-Dzt" firstAttribute="top" secondItem="ptG-to-tBV" secondAttribute="bottom" constant="29" id="QrS-hf-W9a"/>
+                            <constraint firstItem="pLu-dn-vLz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uym-L8-WaS"/>
+                            <constraint firstItem="aJl-bb-Lhw" firstAttribute="top" secondItem="I9z-G6-HEi" secondAttribute="bottom" constant="19" id="VEZ-Hc-xmp"/>
+                            <constraint firstItem="Zjf-0t-5Oo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WoH-yX-qCy"/>
+                            <constraint firstItem="ofp-1Y-vWZ" firstAttribute="leading" secondItem="ptG-to-tBV" secondAttribute="trailing" constant="40" id="YsD-5G-yig"/>
+                            <constraint firstItem="aJl-bb-Lhw" firstAttribute="leading" secondItem="pLu-dn-vLz" secondAttribute="trailing" constant="31" id="aFy-Ga-Hqw"/>
+                            <constraint firstItem="U3A-w9-XcH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gIr-bb-FBz"/>
+                            <constraint firstItem="I9z-G6-HEi" firstAttribute="leading" secondItem="ofp-1Y-vWZ" secondAttribute="trailing" constant="31" id="nWy-XU-9ki"/>
+                            <constraint firstItem="nzt-cB-Dzt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uVm-6a-ga0"/>
+                            <constraint firstItem="I9z-G6-HEi" firstAttribute="top" secondItem="U3A-w9-XcH" secondAttribute="bottom" constant="38" id="vDO-Jb-Fcc"/>
+                            <constraint firstItem="Zjf-0t-5Oo" firstAttribute="top" secondItem="pLu-dn-vLz" secondAttribute="bottom" constant="49" id="wvw-I0-Q4M"/>
+                            <constraint firstItem="ptG-to-tBV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xyh-NI-TcB"/>
+                            <constraint firstItem="pLu-dn-vLz" firstAttribute="leading" secondItem="nzt-cB-Dzt" secondAttribute="trailing" constant="15" id="ysZ-Q1-0me"/>
+                            <constraint firstItem="ofp-1Y-vWZ" firstAttribute="top" secondItem="U3A-w9-XcH" secondAttribute="bottom" constant="39" id="zzS-FV-xsU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="celsiusEnter" destination="ofp-1Y-vWZ" id="naa-eS-BFm"/>
+                        <outlet property="convertedTemp" destination="Zjf-0t-5Oo" id="nkq-tU-aTF"/>
+                        <outlet property="fahrenheitEnter" destination="pLu-dn-vLz" id="QSE-QS-uWA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="82.366071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
